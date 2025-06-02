@@ -4,17 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Project Details - Kristaleen Protacio</title>
-
-    <!-- FontAwesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <!-- Link to external CSS -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
   <header>
@@ -30,74 +24,21 @@
 
   <main>
     <section id="project-details">
-      <div class="container">
-        <h2>PROJECTS</h2>
-        <div class="project-slideshow">
-          <button class="slide-btn left" aria-label="Previous Project"><i class="fas fa-chevron-left"></i></button>
-          <div class="slide-content">
-            <!-- Each project slide -->
+      <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <h2 style="text-align:center;">
+          <i class="fas fa-folder-open" style="color:var(--primary,#8A784E);margin-right:0.5rem;"></i>Projects
+        </h2>
+        <div class="project-slideshow" style="margin-left:auto; margin-right:auto;">
+          <div class="slide-nav-row">
+            <button class="slide-btn left" aria-label="Previous Project"><i class="fas fa-chevron-left"></i></button>
+            <span class="slide-indicator" style="flex:1;text-align:center;font-weight:600;font-size:1.1rem;color:var(--accent,#3B3B1A);"></span>
+            <button class="slide-btn right" aria-label="Next Project"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          <div class="slide-content" style="margin-left:auto; margin-right:auto;">
+            <!-- Project Slide 1-->
             <div class="project-slide active">
-              <h3>Portfolio Website - Using HTML and CSS</h3>
-              <ul style="margin-bottom:1.5rem;">
-                <li>
-                  The Portfolio Website is a responsive and visually appealing site designed to highlight my background, technical skills, and featured projects.
-                </li>
-                <li>
-                  Includes a home section with an introduction, an about section with education and skills, a projects section with detailed cards, and a contact section for easy communication.
-                </li>
-                <li>
-                  The design emphasizes clarity, accessibility, and modern web standards.
-                </li>
-                <li>
-                  Built with HTML and CSS, the website showcases my skills, projects, and contact information in a clean and professional layout.
-                </li>
-              </ul>
-              
-              <div class="project-links">
-          
-                <a href="#" class="btn btn-github">
-                  <i class="fab fa-github"></i>
-                  <span>Source Code</span>
-                </a>
-              </div>
-            </div>
-            <!-- Add more .project-slide divs for additional projects as needed -->
-            <div class="project-slide">
-              <h3>Task Manager App</h3>
-              <p>
-                A React-based task tracker with deadline reminders and project tags.
-              </p>
-              <div class="team-section">
-                <h4>Project Team</h4>
-                <div class="table-container">
-                  <table class="team-table">
-                    <thead>
-                      <tr>
-                        <th>No.</th>
-                        <th>Name</th>
-                        <th>Responsibilities</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Kristaleen Protacio</td>
-                        <td>
-                          Front-end development, UI/UX design, and integration with backend API.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Teammate 2</td>
-                        <td>
-                          Backend API development and database management.
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="project-links">
+              <h3><i class="fas fa-globe" style="color:var(--primary,#8A784E);margin-right:0.5rem;"></i>Portfolio Website - Using HTML and CSS</h3>
+              <div class="project-links" style="margin-bottom: 1.5rem; justify-content: flex-start;">
                 <a href="#" class="btn btn-report">
                   <i class="fas fa-file-alt"></i>
                   <span>View Report</span>
@@ -107,12 +48,119 @@
                   <span>Source Code</span>
                 </a>
               </div>
+              <table class="desc-table colored-table">
+                <tbody>
+                  <tr>
+                    <td class="desc-label">Overview</td>
+                    <td class="desc-value">
+                      The Portfolio Website is a responsive and visually appealing site designed to highlight my background, technical skills, and featured projects.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="desc-label">Description</td>
+                    <td class="desc-value">
+                      Includes a home section with an introduction, an about section with education and skills, a projects section with detailed cards, and a contact section for easy communication.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="desc-label">Tech Stack</td>
+                    <td class="desc-value">
+                      Built with HTML and CSS, the website showcases my skills, projects, and contact information in a clean and professional layout.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+            <!-- Project Slide 2-->
             <div class="project-slide">
-              <h3>Weather App</h3>
-              <p>
-                Fetches real-time weather data using a public API with dynamic UI.
-              </p>
+              <h3><i class="fas fa-exchange-alt" style="color:var(--primary,#8A784E);margin-right:0.5rem;"></i>Bartering Mobile Application Using React Native</h3>
+              <div class="project-links" style="margin-bottom: 1.5rem; justify-content: flex-start;">
+                <a href="#" class="btn btn-report">
+                  <i class="fas fa-file-alt"></i>
+                  <span>View Report</span>
+                </a>
+                <a href="#" class="btn btn-github">
+                  <i class="fab fa-github"></i>
+                  <span>Source Code</span>
+                </a>
+              </div>
+              <table class="desc-table colored-table">
+                <tbody>
+                  <tr>
+                    <td class="desc-label">Overview</td>
+                    <td class="desc-value">
+                      Designed and developed a dedicated mobile application for a bartering system using React Native, providing a platform for users to exchange goods and services without using money.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="desc-label">Description</td>
+                    <td class="desc-value">
+                      <ul style="margin:0; padding-left:1.2em;">
+                        <li>End users are able to register and post their products</li>
+                        <li>Users can browse products and initiate barter requests</li>
+                        <li>User can communicate between each other through WhatsApp</li>
+                        <li>Admin can manage users and products</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="desc-label">Tech Stack</td>
+                    <td class="desc-value">
+                      Built with React Native and Appwrite. 
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="img-row">
+                <div style="text-align:center;">
+                  <img src="images/splash.jpeg" alt="Barter App Splash Screen">
+                  <div class="img-label">Splash</div>
+                </div>
+                <div style="text-align:center;">
+                  <img src="images/home.jpeg" alt="Barter App Home Screen">
+                  <div class="img-label">Home</div>
+                </div>
+              </div>
+            </div>
+            <!-- Project Slide 3-->
+            <div class="project-slide">
+              <h3><i class="fas fa-mobile-alt" style="color:var(--primary,#8A784E);margin-right:0.5rem;"></i>FeelTok App</h3>
+              <div class="project-links" style="margin-bottom: 1.5rem; justify-content: flex-start;">
+                <a href="#" class="btn btn-report">
+                  <i class="fas fa-file-alt"></i>
+                  <span>View Report</span>
+                </a>
+                <a href="#" class="btn btn-github">
+                  <i class="fab fa-github"></i>
+                  <span>Source Code</span>
+                </a>
+              </div>
+              <table class="desc-table colored-table">
+                <tbody>
+                  <tr>
+                    <td class="desc-label">Overview</td>
+                    <td class="desc-value">
+                      Developed a mobile application focused on user engagement and emotional expression.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="desc-label">Description</td>
+                    <td class="desc-value">
+                      <ul style="margin:0; padding-left:1.2em;">
+                        <li>Allows users to share and react to short video/audio clips</li>
+                        <li>Features a modern, intuitive interface for seamless interaction</li>
+                        <li>Supports user authentication and personalized feeds</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="desc-label">Tech Stack</td>
+                    <td class="desc-value">
+                      Built with React Native and Firebase.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
               <div class="team-section">
                 <h4>Project Team</h4>
                 <div class="table-container">
@@ -143,28 +191,24 @@
                   </table>
                 </div>
               </div>
-              <div class="project-links">
-                <a href="#" class="btn btn-report">
-                  <i class="fas fa-file-alt"></i>
-                  <span>View Report</span>
-                </a>
-                <a href="#" class="btn btn-github">
-                  <i class="fab fa-github"></i>
-                  <span>Source Code</span>
-                </a>
+              <div class="img-row">
+                <div style="text-align:center;">
+                  <img src="images/feeltok.jpeg" alt="FeelTok Splash Screen">
+                  
+                </div>
               </div>
             </div>
           </div>
-          <button class="slide-btn right" aria-label="Next Project"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
   </main>
   <script>
-    // Simple slideshow logic
+    // Simple slideshow logic with indicator
     const slides = document.querySelectorAll('.project-slide');
     const leftBtn = document.querySelector('.slide-btn.left');
     const rightBtn = document.querySelector('.slide-btn.right');
+    const indicator = document.querySelector('.slide-indicator');
     let current = 0;
 
     function showSlide(idx) {
@@ -172,6 +216,9 @@
         slide.classList.toggle('active', i === idx);
         slide.style.display = i === idx ? 'block' : 'none';
       });
+      if (indicator) {
+        indicator.textContent = `Project ${idx + 1} of ${slides.length}`;
+      }
     }
     showSlide(current);
 
