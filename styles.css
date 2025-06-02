@@ -641,7 +641,6 @@ footer {
   gap: 0.6rem;
   box-shadow: 0 2px 8px rgba(59,59,26,0.08);
   text-decoration: none;
-  transition: background 0.2s, transform 0.2s;
 }
 .project-links .btn:hover {
   background: var(--accent, #3B3B1A);
@@ -738,63 +737,177 @@ footer {
   gap: 0.6rem;
   box-shadow: 0 2px 8px rgba(59,59,26,0.08);
   text-decoration: none;
-  transition: background 0.2s, transform 0.2s;
+}
+
+.responsive-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+}
+
+.project-slideshow {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .slide-nav-row {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 1.5rem;
-  gap: 0.5rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .slide-indicator {
-  font-family: 'Space Grotesk', sans-serif;
-  letter-spacing: 0.01em;
-  font-size: 1.08rem;
-  color: var(--accent, #3B3B1A);
+  flex: 1;
+  text-align: center;
   font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--accent, #3B3B1A);
 }
 
-@media (max-width: 900px) {
+.slide-content {
+  width: 100%;
+}
+
+.project-slide {
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.project-slide.active {
+  display: block;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: flex-start;
+}
+
+.img-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.img-col {
+  flex: 1 1 180px;
+  min-width: 140px;
+  max-width: 220px;
+  text-align: center;
+}
+.img-col img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-width: 200px;
+}
+
+.desc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  word-break: break-word;
+}
+.desc-label {
+  font-weight: 600;
+  width: 30%;
+  vertical-align: top;
+  padding: 0.5em 0.7em;
+}
+.desc-value {
+  width: 70%;
+  padding: 0.5em 0.7em;
+}
+
+@media (max-width: 700px) {
   .project-slideshow {
+    max-width: 100%;
+    padding: 0;
+  }
+  .desc-table,
+  .desc-label,
+  .desc-value {
+    font-size: 0.95rem;
+  }
+  .img-row {
     flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
-    padding: 1rem 0.5rem;
+    gap: 0.5rem;
+  }
+  .img-col {
+    max-width: 100%;
+    min-width: 0;
+  }
+  #project-details {
+    padding: 1.2rem 0.5rem;
+    margin: 1.5rem 0.2rem;
+  }
+  .slide-content {
+    margin: 0;
+    max-width: 100%;
+  }
+  .project-slide {
+    padding: 1.2rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-center {
+    padding: 1rem 0.2rem;
+  }
+  .welcome-title {
+    font-size: 1.2rem;
+  }
+  .section-title {
+    font-size: 1.1rem;
   }
   .slide-nav-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .desc-table,
+  .desc-label,
+  .desc-value {
+    font-size: 0.85rem;
+    padding: 0.3em 0.4em;
+  }
+  .project-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
   }
   .slide-btn {
-    margin: 0 0.7rem 0 0.7rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    margin: 0 0.5rem 0 0.5rem;
+  }
+  .img-col img {
+    max-width: 100%;
+    min-width: 0;
   }
   .project-slide img {
-    max-width: 200px;
+    max-width: 100%;
   }
-  .project-slide .img-row img[alt*="FeelTok"] {
-    max-width: 300px;
-  }
-}
-@media (max-width: 600px) {
   #project-details {
-    padding: 1rem 0.2rem;
-  }
-  .slide-content {
-    padding: 0 0.2rem;
-  }
-  .project-slide {
-    padding: 0.7rem 0.2rem;
-  }
-  .desc-table .desc-label, .desc-table .desc-value {
-    padding: 0.7rem 0.4rem;
-    font-size: 0.97rem;
-  }
-  .project-slide img {
-    max-width: 120px;
-  }
-  .project-slide .img-row img[alt*="FeelTok"] {
-    max-width: 160px;
+    padding: 0.7rem 0.1rem;
+    margin: 0.7rem 0.1rem;
   }
 }
