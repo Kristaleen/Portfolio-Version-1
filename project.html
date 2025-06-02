@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Details - Kristaleen Protacio</title>
+
+    <!-- FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="project-details">
+      <div class="container">
+        <h2>PROJECTS</h2>
+        <div class="project-slideshow">
+          <button class="slide-btn left" aria-label="Previous Project"><i class="fas fa-chevron-left"></i></button>
+          <div class="slide-content">
+            <!-- Each project slide -->
+            <div class="project-slide active">
+              <h3>Portfolio Website - Using HTML and CSS</h3>
+              <ul style="margin-bottom:1.5rem;">
+                <li>
+                  The Portfolio Website is a responsive and visually appealing site designed to highlight my background, technical skills, and featured projects.
+                </li>
+                <li>
+                  Includes a home section with an introduction, an about section with education and skills, a projects section with detailed cards, and a contact section for easy communication.
+                </li>
+                <li>
+                  The design emphasizes clarity, accessibility, and modern web standards.
+                </li>
+                <li>
+                  Built with HTML and CSS, the website showcases my skills, projects, and contact information in a clean and professional layout.
+                </li>
+              </ul>
+              
+              <div class="project-links">
+          
+                <a href="#" class="btn btn-github">
+                  <i class="fab fa-github"></i>
+                  <span>Source Code</span>
+                </a>
+              </div>
+            </div>
+            <!-- Add more .project-slide divs for additional projects as needed -->
+            <div class="project-slide">
+              <h3>Task Manager App</h3>
+              <p>
+                A React-based task tracker with deadline reminders and project tags.
+              </p>
+              <div class="team-section">
+                <h4>Project Team</h4>
+                <div class="table-container">
+                  <table class="team-table">
+                    <thead>
+                      <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Responsibilities</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Kristaleen Protacio</td>
+                        <td>
+                          Front-end development, UI/UX design, and integration with backend API.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Teammate 2</td>
+                        <td>
+                          Backend API development and database management.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-report">
+                  <i class="fas fa-file-alt"></i>
+                  <span>View Report</span>
+                </a>
+                <a href="#" class="btn btn-github">
+                  <i class="fab fa-github"></i>
+                  <span>Source Code</span>
+                </a>
+              </div>
+            </div>
+            <div class="project-slide">
+              <h3>Weather App</h3>
+              <p>
+                Fetches real-time weather data using a public API with dynamic UI.
+              </p>
+              <div class="team-section">
+                <h4>Project Team</h4>
+                <div class="table-container">
+                  <table class="team-table">
+                    <thead>
+                      <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Responsibilities</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Kristaleen Protacio</td>
+                        <td>
+                          UI development, API integration, and responsive design.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Teammate 3</td>
+                        <td>
+                          Weather API research and backend support.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-report">
+                  <i class="fas fa-file-alt"></i>
+                  <span>View Report</span>
+                </a>
+                <a href="#" class="btn btn-github">
+                  <i class="fab fa-github"></i>
+                  <span>Source Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button class="slide-btn right" aria-label="Next Project"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Simple slideshow logic
+    const slides = document.querySelectorAll('.project-slide');
+    const leftBtn = document.querySelector('.slide-btn.left');
+    const rightBtn = document.querySelector('.slide-btn.right');
+    let current = 0;
+
+    function showSlide(idx) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === idx);
+        slide.style.display = i === idx ? 'block' : 'none';
+      });
+    }
+    showSlide(current);
+
+    leftBtn.addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    });
+    rightBtn.addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    });
+  </script>
+</body>
+</html>
